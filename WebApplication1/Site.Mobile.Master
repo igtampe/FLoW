@@ -1,0 +1,60 @@
+﻿<%@ Master Language="VB" AutoEventWireup="true" CodeBehind="Site.master.vb" Inherits="WebApplication1.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FLoW: Fast Lowlevel Webaccess for ViBE</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+	<style type="text/css">
+		.auto-style1 {
+			height: -42px;
+		}
+		.auto-style2 {
+            width: 50%;
+        }
+		</style>
+
+</head>
+<body>
+    <form runat="server">
+
+        <div class="navbar navbar-inverse navbar-fixed-top" style="left: 0; right: 0; top: 0">
+            <div class="container">
+                <div class="navbar-header">
+                    </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a runat="server" href="~/">FLoW</a></li>
+                        <li><a runat="server" href="~/About">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">
+            <table align="center" class="auto-style2">
+				<tr>
+					<td>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            		</td>
+				</tr>
+			</table>
+            <hr class="auto-style1" />
+            <footer>
+                <p class="text-center">&copy; 2018 Igtampe Development Inc, No Rights Reserved.</p>
+            </footer>
+        </div>
+
+    </form>
+</body>
+</html>
